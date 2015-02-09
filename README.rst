@@ -9,7 +9,7 @@ Synthesizing Tasks
 :Course-Name: Software Application Programming I
 :Course-Code: IS 210
 :Lesson: 03
-:Points: 
+:Points: 15
 :Due-Date: YYYY-MM-DDT09:00:00
 
 Overview
@@ -90,65 +90,146 @@ slicing, ``len()``, and concatenation, you can achieve the same effect.
 Specifications
 ^^^^^^^^^^^^^^
 
-1.  T11
+1.  Open ``task_02.py``
+
+2.  Use a combination of ``.index()``, slicing, ``len()``, simple addition,
+    and string concatenation to programmatically replace the first instance of
+    the word ``Spanish`` with ``Flemish`` in ``inquisition.SPANISH``
+
+3.  Save the result to a new variable named ``FLEMISH``
+
+.. hint::
+
+    Start by creating a variable for the string you want to replace
+    (``'Spanish'``) and then calculating its length
+
+.. hint::
+
+    You can use variables containing integers as positions in a slice
+    operation.
+
+.. Note::
+
+    While this method may, at first, seem very convoluted, there are some
+    common use-cases for it in functions and loops.
 
 Examples
 ^^^^^^^^
 
 .. code:: pycon
 
-    >>> 
+    >>> print FISHY
+    Nobody expects the Flemish Inquisition!
+    Our chief weapon is surprise...
+    ....
 
 Task 03
 -------
 
-
+The slice operation's *step* or *stride* parameter may be used to reverse a
+string.
 
 Specifications
 ^^^^^^^^^^^^^^
 
-1.  T12
+1.  Open ``task_03.py``
+
+2.  Use the third parameter of the slice syntax to reverse the order of the
+    characters in the ``NAPOLEON`` variable and save the result into a new
+    variable named ``REVERSED``
+
+3.  Use the ``.lower()`` method to set ``REVERSED`` to lowercase and save
+    the result back onto itself.
 
 Examples
 ^^^^^^^^
 
 .. code:: pycon
 
-    >>> 
+    >>> print REVERSED
+    .able was i ere ,i saw elba
 
 Task 04
 -------
 
-
+While concatenation and slicing are certainly acceptable ways to manipulate
+strings, the preferred means of injecting data into strings is via the
+``.format()`` method.
 
 Specifications
 ^^^^^^^^^^^^^^
 
-1.  T19
+1.  Open ``task_04.py``
+
+2.  Modify the ``NEWS`` variable so that the last formatting string (``{1}``)
+    will display its value as a 6-digit number padded with zeros.
+
+3.  Use the ``.format()`` method to format the ``NEWS`` string variable and
+    assign the following values:
+
+    -   ``{friend}`` => ``FNAME``
+    -   ``{0}`` => ``NTYPE``
+    -   ``{1}`` => ``RNUM``
+
+    Save the result into a new variable named ``EMAIL``
 
 Examples
 ^^^^^^^^
 
 .. code:: pycon
 
-    >>> 
+    >>> print EMAIL
+    Hi Pat! I have *amazing* news! I won the raffle with number 000042!
 
 Task 05
 -------
 
-
+Object identity using ``is`` is another form of comparison operation. Unlike
+its cousin the equality operator (``==``), ``is`` tests if the two things being
+compared are the exact same object. In many languages this can be thought of as
+the strict comparison operator (``===``). This operator can also be modified by
+the ``not`` logical operator to invert the response (eg, ``is not``). This is
+sometimes a very important distinction as you'll see below.
 
 Specifications
 ^^^^^^^^^^^^^^
 
-1.  T20
+1.  Open ``task_05.py``
 
-Examples
-^^^^^^^^
+2.  Currently, this code is broken. when ``is_empty()`` is passed an empty
+    string it throws an error. Because an empty string still has a length (0),
+    it should instead report ``True``
 
-.. code:: pycon
+3.  fix the ``is_empty()`` function by changing one operator on one line of
+    code so that it only raises an exception when it's passed a non-sequence
+    data type, like an integer. Otherwise, it should correctly report whether
+    or not the passed argument has no length.
 
-    >>> 
+.. hint::
+
+    Review the alternative values of booleans.
+
+.. hint::
+
+    If you use ``python -i`` to run this code you can use the interactive
+    command line to call ``is_empty()`` and pass it any type of data you want
+    including empty string (``is_empty('')``), non-empty strings
+    (``is_empty('apple')``), and integers (``is_empty(2)``).
+
+.. hint::
+
+    Read the docstrings for both functions to get a sense of what they do.
+
+.. important::
+
+    Much of what you see in this file may be new and that's intended. A
+    critical skill for programmers of all aptitudes is the ability to
+    investigate complex codebases and identify a particular feature or fix that
+    is already within the scope of your current skillset. Many codebases are so
+    large it is literally impossible for any one person to have a complete
+    understanding of the system and in such situations, it is important to have
+    the confidence and experience necessary to successfully skim through the
+    unnecessary components.
 
 Executing Tests
 ===============
