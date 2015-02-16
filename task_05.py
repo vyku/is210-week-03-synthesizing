@@ -3,7 +3,7 @@
 """Provides the is_empty() method."""
 
 
-def get_member_count(my_sequence):
+def get_member_count():
     """Returns the number of members of a list object.
 
     Args:
@@ -67,6 +67,6 @@ def is_empty(my_sequence):
         raise TypeError('Object has no len()')
 
 
-TEST = ''
+TEST = 'sequence'
 print len(TEST)
-print is_empty(TEST)
+#print is_empty(TEST)

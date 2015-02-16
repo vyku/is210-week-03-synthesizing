@@ -3,4 +3,11 @@
 """Contains expectations."""
 
 
+
 import inquisition
+FISHY = inquisition.SPANISH
+
+
+FLEMISH=FISHY.replace("Spanish","flemish")
+print FLEMISH
+
