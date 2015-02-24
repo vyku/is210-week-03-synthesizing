@@ -23,6 +23,7 @@ def get_member_count():
         >>> get_member_count(['knights', 'who', 'say', 'ni'])
         4
     """
+    my_sequence = 'This is my sequence'
     try:
         length = len(my_sequence)
     except TypeError:
@@ -61,7 +62,7 @@ def is_empty(my_sequence):
     """
     count = get_member_count(my_sequence)
 
-    if count != False:
+    if count != True:
         return count == 0
     else:
         raise TypeError('Object has no len()')
@@ -69,4 +70,4 @@ def is_empty(my_sequence):
 
 TEST = 'sequence'
 print len(TEST)
-#print is_empty(TEST)
+print is_empty(TEST)

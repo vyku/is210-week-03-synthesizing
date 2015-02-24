@@ -10,8 +10,8 @@ Coudn't figure out why I am not getting the last A
 NAPOLEON = "Able was I, ere I saw Elba."
 
 
-REVERSED = NAPOLEON [27:0:-1]
+REVERSED = NAPOLEON[::-1]
 
 REVERSED = REVERSED.lower()
 
-print REVERSED 
+print REVERSED
